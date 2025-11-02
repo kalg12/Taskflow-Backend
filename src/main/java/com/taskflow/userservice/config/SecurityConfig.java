@@ -19,7 +19,7 @@ public class SecurityConfig {
     private final JwtAuthFilter jwtAuthFilter;
 
     /*
-     * English: SecurityConfig defines which endpoints are public and which
+     * SecurityConfig defines which endpoints are public and which
      * require authentication. We register JwtAuthFilter before the
      * UsernamePasswordAuthenticationFilter so that JWT validation happens on
      * every request and the SecurityContext gets populated when token is valid.
@@ -37,13 +37,13 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // English: BCrypt is used to hash passwords before saving and to verify credentials.
+    // BCrypt is used to hash passwords before saving and to verify credentials.
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    // English: expose AuthenticationManager so services can perform authentication.
+    // Expose AuthenticationManager so services can perform authentication.
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();

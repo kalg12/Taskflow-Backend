@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 /**
- * English: simple Role entity used as a granted authority.
+ * Simple Role entity used as a granted authority.
  * - name: for example "USER" or "ADMIN"; JwtAuthFilter maps it to
  *   a Spring Security authority as "ROLE_USER".
  */

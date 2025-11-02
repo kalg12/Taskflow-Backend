@@ -30,7 +30,7 @@ public class AuthService {
      * - Password is hashed using the configured PasswordEncoder (BCrypt).
      * - Throws an exception if the email is already registered.
      *
-     * English tip: think of registration as "create account". We never
+     * Tip: think of registration as "create account". We never
      * store raw passwords — we hash them before saving.
      */
     public User register(RegisterRequest request) {
